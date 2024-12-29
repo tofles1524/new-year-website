@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Tahun Baru</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+            color: #211717;
+            padding: 20px;
+            animation: backgroundChange 5s infinite alternate;
+        }
+        h1 {
+            color: #2d89ef;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 1.3em;
+            color: #444;
+            display: none;
+            line-height: 1.8;
+        }
+        .form-container {
+            margin-top: 30px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 1em;
+            width: 80%;
+            max-width: 300px;
+            border: 2px solid #2d89ef;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            margin-top: 10px;
+            color: #fff;
+            background-color: #2d89ef;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #1e5cb0;
+        }
+        a {
+            display: none;
+            margin-top: 20px;
+            color: #2d89ef;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animasi perubahan latar belakang */
+        @keyframes backgroundChange {
+            0% {
+                background-color: #f5f5f5;
+            }
+            100% {
+                background-color: #e0e0e0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Selamat Tahun Baru 2025! 🎆✨</h1>
+
+    <div class="form-container">
+        <p>Masukkan nama Anda untuk ucapan spesial:</p>
+        <input type="text" id="nameInput" placeholder="Masukkan nama Anda">
+        <button onclick="displayMessage()">Tampilkan Ucapan</button>
+        <p id="personalMessage" class="message"></p>
+    </div>
+
+    <a href="#" id="infoLink">Kunjungi Google untuk informasi lebih lanjut</a>
+
+    <script>
+        function displayMessage() {
+            const name = document.getElementById('nameInput').value;
+            const messageElement = document.getElementById('personalMessage');
+            const linkElement = document.getElementById('infoLink');
+
+            if (name.trim() !== "") {
+                messageElement.innerHTML = `🌟 Happy New Year, ${name}! 🎉💖<br><br>
+                Tahun baru adalah babak baru dalam perjalanan hidupmu. Ingatlah, kesuksesan bukanlah tentang mencapai tujuan dengan cepat, tetapi tentang ketekunan untuk terus maju meskipun dunia sepertinya tidak berpihak padamu. 💪✨<br><br>
+                Setiap tantangan yang kamu hadapi akan membentukmu menjadi pribadi yang lebih kuat. Jangan pernah menyerah, karena setiap langkah yang kamu ambil membawa kamu lebih dekat ke impianmu. 💖🌠<br><br>
+                Percayalah, tahun ini adalah tahunmu untuk menggapai impian besar! Aku percaya, kamu pasti bisa! 🚀🎯`;
+                messageElement.style.display = "block";
+                linkElement.style.display = "block";
+            } else {
+                messageElement.textContent = "";
+                messageElement.style.display = "none";
+                linkElement.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
